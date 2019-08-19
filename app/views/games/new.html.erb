@@ -1,0 +1,61 @@
+<h1 style="margin-left: 14px;">New Game</h1>
+
+
+<div class="row" style="display: inline-grid; width: 100%; grid-gap: 24px; margin-bottom: 24px; margin-left: 14px; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr">
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[0]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[1]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[2]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[3]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[4]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[5]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[6]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[7]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[8]%></h2>
+  </div>
+  <div class="column" style="color: white; text-align: center; background-color:#3498dc;">
+    <h2><%=@letters[9]%></h2>
+  </div>
+</div>
+
+<div style="margin-top: 24px; margin-left: 14px;">
+  <h4 style="font-weight: lighter;">What is the longest word you can find?</h4>
+  <form action="/score" method="POST">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="hidden" name="grid" value="<%= @letters.join(', ') %>" style="width: 245px;">
+    <input type="text" name="answer" style="width: 245px;">
+    <input type="submit" value="Play">
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
